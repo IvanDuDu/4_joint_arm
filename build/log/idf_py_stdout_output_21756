@@ -1,0 +1,194 @@
+[1/11] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[2/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Project\arm4Joint\army\build\bootloader\esp-idf\esptool_py && d:\After_the_April\espExpress\python_env\idf5.4_py3.11_env\Scripts\python.exe D:/After_the_April/espTools/v5.4.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Project/arm4Joint/army/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6580 bytes. 0xa80 bytes (9%) free.
+[3/11] No install step for 'bootloader'
+[4/11] Completed 'bootloader'
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+ccache D:\After_the_April\espExpress\tools\xtensa-esp-elf\esp-14.2.0_20241119\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.4.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/Project/arm4Joint/army/build/config -I"D:/Project/arm4Joint/army/main/ " -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/newlib/platform_include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/config/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/config/include/freertos -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/config/xtensa/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/esp_additions/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/include/soc -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/include/soc/esp32 -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/dma/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/ldo/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/debug_probe/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/port/esp32/. -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/port/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/heap/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/heap/tlsf -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/soc/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/soc/esp32 -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/soc/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/soc/esp32/register -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/hal/platform_port/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/hal/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/hal/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_rom/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_rom/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_rom/esp32/include/esp32 -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_rom/esp32 -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_common/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/soc -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/include/private -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/deprecated_include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/include/apps -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/include/apps/sntp -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/lwip/src/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/port/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/port/freertos/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/port/esp32xx/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/port/esp32xx/include/arch -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/lwip/port/esp32xx/include/sys -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/driver/deprecated -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/driver/i2c/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/driver/touch_sensor/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/driver/twai/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/driver/touch_sensor/esp32/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_pm/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_ringbuf/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_pcnt/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gptimer/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_spi/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_mcpwm/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_ana_cmpr/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_i2s/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_sdmmc/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/sdmmc/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_sdspi/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_sdio/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_dac/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_rmt/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_tsens/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_sdm/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_i2c/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_uart/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/vfs/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_ledc/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_parlio/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_usb_serial_jtag/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/nvs_flash/include -ID:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_partition/include -ID:/Project/arm4Joint/army/managed_components/espressif__led_strip/include -ID:/Project/arm4Joint/army/managed_components/espressif__led_strip/interface -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/Project/arm4Joint/army=. -fmacro-prefix-map=D:/After_the_April/espTools/v5.4.1/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c D:/Project/arm4Joint/army/main/main.c
+In file included from D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:15,
+                 from D:/Project/arm4Joint/army/main/main.c:6:
+D:/Project/arm4Joint/army/main/main.c: In function 'system_init':
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:98:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+   98 | #define LOG_COLOR_E           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_E'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:182:86: note: in expansion of macro 'LOG_FORMAT'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:111:5: note: in expansion of macro 'ESP_LOGI'
+  111 |     ESP_LOGI(TAG, "  - Free heap: %d bytes", esp_get_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:99:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+   99 | #define LOG_COLOR_W           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_W'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:183:86: note: in expansion of macro 'LOG_FORMAT'
+  183 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:111:5: note: in expansion of macro 'ESP_LOGI'
+  111 |     ESP_LOGI(TAG, "  - Free heap: %d bytes", esp_get_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:101:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  101 | #define LOG_COLOR_D           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_D'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:184:86: note: in expansion of macro 'LOG_FORMAT'
+  184 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:111:5: note: in expansion of macro 'ESP_LOGI'
+  111 |     ESP_LOGI(TAG, "  - Free heap: %d bytes", esp_get_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:102:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  102 | #define LOG_COLOR_V           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_V'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:185:86: note: in expansion of macro 'LOG_FORMAT'
+  185 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:111:5: note: in expansion of macro 'ESP_LOGI'
+  111 |     ESP_LOGI(TAG, "  - Free heap: %d bytes", esp_get_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:100:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  100 | #define LOG_COLOR_I           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_I'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:186:86: note: in expansion of macro 'LOG_FORMAT'
+  186 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:111:5: note: in expansion of macro 'ESP_LOGI'
+  111 |     ESP_LOGI(TAG, "  - Free heap: %d bytes", esp_get_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:98:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+   98 | #define LOG_COLOR_E           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_E'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:182:86: note: in expansion of macro 'LOG_FORMAT'
+  182 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:112:5: note: in expansion of macro 'ESP_LOGI'
+  112 |     ESP_LOGI(TAG, "  - Minimum free heap: %d bytes", esp_get_minimum_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:99:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+   99 | #define LOG_COLOR_W           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_W'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:183:86: note: in expansion of macro 'LOG_FORMAT'
+  183 |         else if (level==ESP_LOG_WARN )      { esp_log_write(ESP_LOG_WARN,       tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:112:5: note: in expansion of macro 'ESP_LOGI'
+  112 |     ESP_LOGI(TAG, "  - Minimum free heap: %d bytes", esp_get_minimum_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:101:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  101 | #define LOG_COLOR_D           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_D'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:184:86: note: in expansion of macro 'LOG_FORMAT'
+  184 |         else if (level==ESP_LOG_DEBUG )     { esp_log_write(ESP_LOG_DEBUG,      tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:112:5: note: in expansion of macro 'ESP_LOGI'
+  112 |     ESP_LOGI(TAG, "  - Minimum free heap: %d bytes", esp_get_minimum_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:102:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  102 | #define LOG_COLOR_V           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_V'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:185:86: note: in expansion of macro 'LOG_FORMAT'
+  185 |         else if (level==ESP_LOG_VERBOSE )   { esp_log_write(ESP_LOG_VERBOSE,    tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:112:5: note: in expansion of macro 'ESP_LOGI'
+  112 |     ESP_LOGI(TAG, "  - Minimum free heap: %d bytes", esp_get_minimum_free_heap_size());
+      |     ^~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log_color.h:100:31: error: format '%d' expects argument of type 'int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+  100 | #define LOG_COLOR_I           ""
+      |                               ^~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:62:37: note: in expansion of macro 'LOG_COLOR_I'
+   62 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                     ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:186:86: note: in expansion of macro 'LOG_FORMAT'
+  186 |         else                                { esp_log_write(ESP_LOG_INFO,       tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                      ^~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:205:38: note: in expansion of macro 'ESP_LOG_LEVEL'
+  205 |         if (_ESP_LOG_ENABLED(level)) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |                                      ^~~~~~~~~~~~~
+D:/After_the_April/espTools/v5.4.1/esp-idf/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+D:/Project/arm4Joint/army/main/main.c:112:5: note: in expansion of macro 'ESP_LOGI'
+  112 |     ESP_LOGI(TAG, "  - Minimum free heap: %d bytes", esp_get_minimum_free_heap_size());
+      |     ^~~~~~~~
+cc1.exe: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

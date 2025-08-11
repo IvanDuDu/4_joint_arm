@@ -1,0 +1,432 @@
+et�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug  5 2025 10:23:50[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v3.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (40) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bd04h ( 48388) map[0m
+[0;32mI (107) esp_image: segment 1: paddr=0001bd2c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001bd50 vaddr=3ffb0000 size=024a4h (  9380) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=0001e1fc vaddr=40080000 size=01e1ch (  7708) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=19a5ch (105052) map[0m
+[0;32mI (162) esp_image: segment 5: paddr=00039a84 vaddr=40081e1c size=0c274h ( 49780) load[0m
+[0;32mI (188) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (188) boot: Disabling RNG early entropy source...[0m
+[0;32mI (199) cpu_start: Multicore app[0m
+[0;32mI (207) cpu_start: Pro cpu start user code[0m
+[0;32mI (207) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (207) app_init: Application information:[0m
+[0;32mI (207) app_init: Project name:     army[0m
+[0;32mI (211) app_init: App version:      1[0m
+[0;32mI (214) app_init: Compile time:     Aug  5 2025 10:29:17[0m
+[0;32mI (219) app_init: ELF file SHA256:  36ee414ce...[0m
+[0;32mI (223) app_init: ESP-IDF:          v5.4.1-dirty[0m
+[0;32mI (228) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (232) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (236) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (246) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFB2F58 len 0002D0A8 (180 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (267) heap_init: At 4008E090 len 00011F70 (71 KiB): IRAM[0m
+[0;32mI (274) spi_flash: detected chip: generic[0m
+[0;32mI (276) spi_flash: flash io: dio[0m
+[0;33mW (279) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (292) main_task: Started on CPU0[0m
+[0;32mI (302) main_task: Calling app_main()[0m
+[0;32mI (302) MAIN: ========================================[0m
+[0;32mI (302) MAIN:       Robot Arm Controller v1.0        [0m
+[0;32mI (302) MAIN: ========================================[0m
+[0;32mI (312) MAIN: Initializing system components...[0m
+[0;32mI (352) MAIN: ✓ NVS initialized[0m
+[0;32mI (352) GPIO_MGR: Initializing GPIO manager...[0m
+[0;32mI (352) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 [0m
+[0;32mI (352) GPIO_MGR: GPIO task started[0m
+[0;32mI (352) GPIO_MGR: GPIO manager initialized successfully[0m
+[0;32mI (362) GPIO_MGR: Button config - Debounce: 50ms, Long press: 2000ms, Double click: 500ms[0m
+[0;32mI (372) MAIN: ✓ GPIO manager initialized[0m
+[0;32mI (372) GPIO_MGR: Button callback registered[0m
+[0;32mI (372) MAIN: ✓ Button callback registered[0m
+[0;32mI (382) SERVO: Initializing servo controller...[0m
+[1;31mE (382) SERVO: Servo system not initialized[0m
+[1;31mE (492) SERVO: Servo system not initialized[0m
+[1;31mE (592) SERVO: Servo system not initialized[0m
+[1;31mE (692) SERVO: Servo system not initialized[0m
+[0;32mI (792) SERVO: Servo controller initialized successfully[0m
+[0;32mI (792) MAIN: ✓ Servo controller initialized[0m
+[0;32mI (792) MAIN: System Information:[0m
+[0;32mI (792) MAIN:   - Free heap: 295856 bytes[0m
+[0;32mI (792) MAIN:   - Minimum free heap: 295856 bytes[0m
+[0;32mI (792) MAIN: System ready - Starting main application loop[0m
+[0;32mI (802) MAIN: === Loop #1 ===[0m
+[0;32mI (802) MAIN: Running smooth movement demo[0m
+[0;32mI (812) MAIN: Starting smooth movement sequence[0m
+[0;32mI (812) SERVO: Smooth move servo Wrist from 0 to 90 degrees[0m
+[0;32mI (822) SERVO: Servo Wrist set to 1 degrees[0m
+[0;32mI (842) SERVO: Servo Wrist set to 2 degrees[0m
+[0;32mI (862) SERVO: Servo Wrist set to 3 degrees[0m
+[0;32mI (882) SERVO: Servo Wrist set to 4 degrees[0m
+[0;32mI (902) SERVO: Servo Wrist set to 5 degrees[0m
+[0;32mI (922) SERVO: Servo Wrist set to 6 degrees[0m
+[0;32mI (942) SERVO: Servo Wrist set to 7 degrees[0m
+[0;32mI (962) SERVO: Servo Wrist set to 8 degrees[0m
+[0;32mI (982) SERVO: Servo Wrist set to 9 degrees[0m
+[0;32mI (1002) SERVO: Servo Wrist set to 10 degrees[0m
+[0;32mI (1022) SERVO: Servo Wrist set to 11 degrees[0m
+[0;32mI (1042) SERVO: Servo Wrist set to 12 degrees[0m
+[0;32mI (1062) SERVO: Servo Wrist set to 13 degrees[0m
+[0;32mI (1082) SERVO: Servo Wrist set to 14 degrees[0m
+[0;32mI (1102) SERVO: Servo Wrist set to 15 degrees[0m
+[0;32mI (1122) SERVO: Servo Wrist set to 16 degrees[0m
+[0;32mI (1142) SERVO: Servo Wrist set to 17 degrees[0m
+[0;32mI (1162) SERVO: Servo Wrist set to 18 degrees[0m
+[0;32mI (1182) SERVO: Servo Wrist set to 19 degrees[0m
+[0;32mI (1202) SERVO: Servo Wrist set to 20 degrees[0m
+[0;32mI (1222) SERVO: Servo Wrist set to 21 degrees[0m
+[0;32mI (1242) SERVO: Servo Wrist set to 22 degrees[0m
+[0;32mI (1262) SERVO: Servo Wrist set to 23 degrees[0m
+[0;32mI (1282) SERVO: Servo Wrist set to 24 degrees[0m
+[0;32mI (1302) SERVO: Servo Wrist set to 25 degrees[0m
+[0;32mI (1322) SERVO: Servo Wrist set to 26 degrees[0m
+[0;32mI (1342) SERVO: Servo Wrist set to 27 degrees[0m
+[0;32mI (1362) SERVO: Servo Wrist set to 28 degrees[0m
+[0;32mI (1382) SERVO: Servo Wrist set to 29 degrees[0m
+[0;32mI (1402) SERVO: Servo Wrist set to 30 degrees[0m
+[0;32mI (1422) SERVO: Servo Wrist set to 31 degrees[0m
+[0;32mI (1442) SERVO: Servo Wrist set to 32 degrees[0m
+[0;32mI (1462) SERVO: Servo Wrist set to 33 degrees[0m
+[0;32mI (1482) SERVO: Servo Wrist set to 34 degrees[0m
+[0;32mI (1502) SERVO: Servo Wrist set to 35 degrees[0m
+[0;32mI (1522) SERVO: Servo Wrist set to 36 degrees[0m
+[0;32mI (1542) SERVO: Servo Wrist set to 37 degrees[0m
+[0;32mI (1562) SERVO: Servo Wrist set to 38 degrees[0m
+[0;32mI (1582) SERVO: Servo Wrist set to 39 degrees[0m
+[0;32mI (1602) SERVO: Servo Wrist set to 40 degrees[0m
+[0;32mI (1622) SERVO: Servo Wrist set to 41 degrees[0m
+[0;32mI (1642) SERVO: Servo Wrist set to 42 degrees[0m
+[0;32mI (1662) SERVO: Servo Wrist set to 43 degrees[0m
+[0;32mI (1682) SERVO: Servo Wrist set to 44 degrees[0m
+[0;32mI (1702) SERVO: Servo Wrist set to 45 degrees[0m
+[0;32mI (1722) SERVO: Servo Wrist set to 46 degrees[0m
+[0;32mI (1742) SERVO: Servo Wrist set to 47 degrees[0m
+[0;32mI (1762) SERVO: Servo Wrist set to 48 degrees[0m
+[0;32mI (1782) SERVO: Servo Wrist set to 49 degrees[0m
+[0;32mI (1802) SERVO: Servo Wrist set to 50 degrees[0m
+[0;32mI (1822) SERVO: Servo Wrist set to 51 degrees[0m
+[0;32mI (1842) SERVO: Servo Wrist set to 52 degrees[0m
+[0;32mI (1862) SERVO: Servo Wrist set to 53 degrees[0m
+[0;32mI (1882) SERVO: Servo Wrist set to 54 degrees[0m
+[0;32mI (1902) SERVO: Servo Wrist set to 55 degrees[0m
+[0;32mI (1922) SERVO: Servo Wrist set to 56 degrees[0m
+[0;32mI (1942) SERVO: Servo Wrist set to 57 degrees[0m
+[0;32mI (1962) SERVO: Servo Wrist set to 58 degrees[0m
+[0;32mI (1982) SERVO: Servo Wrist set to 59 degrees[0m
+[0;32mI (2002) SERVO: Servo Wrist set to 60 degrees[0m
+[0;32mI (2022) SERVO: Servo Wrist set to 61 degrees[0m
+[0;32mI (2042) SERVO: Servo Wrist set to 62 degrees[0m
+[0;32mI (2062) SERVO: Servo Wrist set to 63 degrees[0m
+[0;32mI (2082) SERVO: Servo Wrist set to 64 degrees[0m
+[0;32mI (2102) SERVO: Servo Wrist set to 65 degrees[0m
+[0;32mI (2122) SERVO: Servo Wrist set to 66 degrees[0m
+[0;32mI (2142) SERVO: Servo Wrist set to 67 degrees[0m
+[0;32mI (2162) SERVO: Servo Wrist set to 68 degrees[0m
+[0;32mI (2182) SERVO: Servo Wrist set to 69 degrees[0m
+[0;32mI (2202) SERVO: Servo Wrist set to 70 degrees[0m
+[0;32mI (2222) SERVO: Servo Wrist set to 71 degrees[0m
+[0;32mI (2242) SERVO: Servo Wrist set to 72 degrees[0m
+[0;32mI (2262) SERVO: Servo Wrist set to 73 degrees[0m
+[0;32mI (2282) SERVO: Servo Wrist set to 74 degrees[0m
+[0;32mI (2302) SERVO: Servo Wrist set to 75 degrees[0m
+[0;32mI (2322) SERVO: Servo Wrist set to 76 degrees[0m
+[0;32mI (2342) SERVO: Servo Wrist set to 77 degrees[0m
+[0;32mI (2362) SERVO: Servo Wrist set to 78 degrees[0m
+[0;32mI (2382) SERVO: Servo Wrist set to 79 degrees[0m
+[0;32mI (2402) SERVO: Servo Wrist set to 80 degrees[0m
+[0;32mI (2422) SERVO: Servo Wrist set to 81 degrees[0m
+[0;32mI (2442) SERVO: Servo Wrist set to 82 degrees[0m
+[0;32mI (2462) SERVO: Servo Wrist set to 83 degrees[0m
+[0;32mI (2482) SERVO: Servo Wrist set to 84 degrees[0m
+[0;32mI (2502) SERVO: Servo Wrist set to 85 degrees[0m
+[0;32mI (2522) SERVO: Servo Wrist set to 86 degrees[0m
+[0;32mI (2542) SERVO: Servo Wrist set to 87 degrees[0m
+[0;32mI (2562) SERVO: Servo Wrist set to 88 degrees[0m
+[0;32mI (2582) SERVO: Servo Wrist set to 89 degrees[0m
+[0;32mI (2602) SERVO: Servo Wrist set to 90 degrees[0m
+[0;32mI (3622) SERVO: Smooth move servo Wrist from 90 to 0 degrees[0m
+[0;32mI (3622) SERVO: Servo Wrist set to 89 degrees[0m
+[0;32mI (3632) SERVO: Servo Wrist set to 88 degrees[0m
+[0;32mI (3642) SERVO: Servo Wrist set to 87 degrees[0m
+[0;32mI (3652) SERVO: Servo Wrist set to 86 degrees[0m
+[0;32mI (3662) SERVO: Servo Wrist set to 85 degrees[0m
+[0;32mI (3672) SERVO: Servo Wrist set to 84 degrees[0m
+[0;32mI (3682) SERVO: Servo Wrist set to 83 degrees[0m
+[0;32mI (3692) SERVO: Servo Wrist set to 82 degrees[0m
+[0;32mI (3702) SERVO: Servo Wrist set to 81 degrees[0m
+[0;32mI (3712) SERVO: Servo Wrist set to 80 degrees[0m
+[0;32mI (3722) SERVO: Servo Wrist set to 79 degrees[0m
+[0;32mI (3732) SERVO: Servo Wrist set to 78 degrees[0m
+[0;32mI (3742) SERVO: Servo Wrist set to 77 degrees[0m
+[0;32mI (3752) SERVO: Servo Wrist set to 76 degrees[0m
+[0;32mI (3762) SERVO: Servo Wrist set to 75 degrees[0m
+[0;32mI (3772) SERVO: Servo Wrist set to 74 degrees[0m
+[0;32mI (3782) SERVO: Servo Wrist set to 73 degrees[0m
+[0;32mI (3792) SERVO: Servo Wrist set to 72 degrees[0m
+[0;32mI (3802) SERVO: Servo Wrist set to 71 degrees[0m
+[0;32mI (3812) SERVO: Servo Wrist set to 70 degrees[0m
+[0;32mI (3822) SERVO: Servo Wrist set to 69 degrees[0m
+[0;32mI (3832) SERVO: Servo Wrist set to 68 degrees[0m
+[0;32mI (3842) SERVO: Servo Wrist set to 67 degrees[0m
+[0;32mI (3852) SERVO: Servo Wrist set to 66 degrees[0m
+[0;32mI (3862) SERVO: Servo Wrist set to 65 degrees[0m
+[0;32mI (3872) SERVO: Servo Wrist set to 64 degrees[0m
+[0;32mI (3882) SERVO: Servo Wrist set to 63 degrees[0m
+[0;32mI (3892) SERVO: Servo Wrist set to 62 degrees[0m
+[0;32mI (3902) SERVO: Servo Wrist set to 61 degrees[0m
+[0;32mI (3912) SERVO: Servo Wrist set to 60 degrees[0m
+[0;32mI (3922) SERVO: Servo Wrist set to 59 degrees[0m
+[0;32mI (3932) SERVO: Servo Wrist set to 58 degrees[0m
+[0;32mI (3942) SERVO: Servo Wrist set to 57 degrees[0m
+[0;32mI (3952) SERVO: Servo Wrist set to 56 degrees[0m
+[0;32mI (3962) SERVO: Servo Wrist set to 55 degrees[0m
+[0;32mI (3972) SERVO: Servo Wrist set to 54 degrees[0m
+[0;32mI (3982) SERVO: Servo Wrist set to 53 degrees[0m
+[0;32mI (3992) SERVO: Servo Wrist set to 52 degrees[0m
+[0;32mI (4002) SERVO: Servo Wrist set to 51 degrees[0m
+[0;32mI (4012) SERVO: Servo Wrist set to 50 degrees[0m
+[0;32mI (4022) SERVO: Servo Wrist set to 49 degrees[0m
+[0;32mI (4032) SERVO: Servo Wrist set to 48 degrees[0m
+[0;32mI (4042) SERVO: Servo Wrist set to 47 degrees[0m
+[0;32mI (4052) SERVO: Servo Wrist set to 46 degrees[0m
+[0;32mI (4062) SERVO: Servo Wrist set to 45 degrees[0m
+[0;32mI (4072) SERVO: Servo Wrist set to 44 degrees[0m
+[0;32mI (4082) SERVO: Servo Wrist set to 43 degrees[0m
+[0;32mI (4092) SERVO: Servo Wrist set to 42 degrees[0m
+[0;32mI (4102) SERVO: Servo Wrist set to 41 degrees[0m
+[0;32mI (4112) SERVO: Servo Wrist set to 40 degrees[0m
+[0;32mI (4122) SERVO: Servo Wrist set to 39 degrees[0m
+[0;32mI (4132) SERVO: Servo Wrist set to 38 degrees[0m
+[0;32mI (4142) SERVO: Servo Wrist set to 37 degrees[0m
+[0;32mI (4152) SERVO: Servo Wrist set to 36 degrees[0m
+[0;32mI (4162) SERVO: Servo Wrist set to 35 degrees[0m
+[0;32mI (4172) SERVO: Servo Wrist set to 34 degrees[0m
+[0;32mI (4182) SERVO: Servo Wrist set to 33 degrees[0m
+[0;32mI (4192) SERVO: Servo Wrist set to 32 degrees[0m
+[0;32mI (4202) SERVO: Servo Wrist set to 31 degrees[0m
+[0;32mI (4212) SERVO: Servo Wrist set to 30 degrees[0m
+[0;32mI (4222) SERVO: Servo Wrist set to 29 degrees[0m
+[0;32mI (4232) SERVO: Servo Wrist set to 28 degrees[0m
+[0;32mI (4242) SERVO: Servo Wrist set to 27 degrees[0m
+[0;32mI (4252) SERVO: Servo Wrist set to 26 degrees[0m
+[0;32mI (4262) SERVO: Servo Wrist set to 25 degrees[0m
+[0;32mI (4272) SERVO: Servo Wrist set to 24 degrees[0m
+[0;32mI (4282) SERVO: Servo Wrist set to 23 degrees[0m
+[0;32mI (4292) SERVO: Servo Wrist set to 22 degrees[0m
+[0;32mI (4302) SERVO: Servo Wrist set to 21 degrees[0m
+[0;32mI (4312) SERVO: Servo Wrist set to 20 degrees[0m
+[0;32mI (4322) SERVO: Servo Wrist set to 19 degrees[0m
+[0;32mI (4332) SERVO: Servo Wrist set to 18 degrees[0m
+[0;32mI (4342) SERVO: Servo Wrist set to 17 degrees[0m
+[0;32mI (4352) SERVO: Servo Wrist set to 16 degrees[0m
+[0;32mI (4362) SERVO: Servo Wrist set to 15 degrees[0m
+[0;32mI (4372) SERVO: Servo Wrist set to 14 degrees[0m
+[0;32mI (4382) SERVO: Servo Wrist set to 13 degrees[0m
+[0;32mI (4392) SERVO: Servo Wrist set to 12 degrees[0m
+[0;32mI (4402) SERVO: Servo Wrist set to 11 degrees[0m
+[0;32mI (4412) SERVO: Servo Wrist set to 10 degrees[0m
+[0;32mI (4422) SERVO: Servo Wrist set to 9 degrees[0m
+[0;32mI (4432) SERVO: Servo Wrist set to 8 degrees[0m
+[0;32mI (4442) SERVO: Servo Wrist set to 7 degrees[0m
+[0;32mI (4452) SERVO: Servo Wrist set to 6 degrees[0m
+[0;32mI (4462) SERVO: Servo Wrist set to 5 degrees[0m
+[0;32mI (4472) SERVO: Servo Wrist set to 4 degrees[0m
+[0;32mI (4482) SERVO: Servo Wrist set to 3 degrees[0m
+[0;32mI (4492) SERVO: Servo Wrist set to 2 degrees[0m
+[0;32mI (4502) SERVO: Servo Wrist set to 1 degrees[0m
+[0;32mI (4512) SERVO: Servo Wrist set to 0 degrees[0m
+[0;32mI (5522) SERVO: Smooth move servo Wrist from 0 to 180 degrees[0m
+[0;32mI (5522) SERVO: Servo Wrist set to 1 degrees[0m
+[0;32mI (5542) SERVO: Servo Wrist set to 2 degrees[0m
+[0;32mI (5562) SERVO: Servo Wrist set to 3 degrees[0m
+[0;32mI (5582) SERVO: Servo Wrist set to 4 degrees[0m
+[0;32mI (5602) SERVO: Servo Wrist set to 5 degrees[0m
+[0;32mI (5622) SERVO: Servo Wrist set to 6 degrees[0m
+[0;32mI (5642) SERVO: Servo Wrist set to 7 degrees[0m
+[0;32mI (5662) SERVO: Servo Wrist set to 8 degrees[0m
+[0;32mI (5682) SERVO: Servo Wrist set to 9 degrees[0m
+[0;32mI (5702) SERVO: Servo Wrist set to 10 degrees[0m
+[0;32mI (5722) SERVO: Servo Wrist set to 11 degrees[0m
+[0;32mI (5742) SERVO: Servo Wrist set to 12 degrees[0m
+[0;32mI (5762) SERVO: Servo Wrist set to 13 degrees[0m
+[0;32mI (5782) SERVO: Servo Wrist set to 14 degrees[0m
+[0;32mI (5802) SERVO: Servo Wrist set to 15 degrees[0m
+[0;32mI (5822) SERVO: Servo Wrist set to 16 degrees[0m
+[0;32mI (5842) SERVO: Servo Wrist set to 17 degrees[0m
+[0;32mI (5862) SERVO: Servo Wrist set to 18 degrees[0m
+[0;32mI (5882) SERVO: Servo Wrist set to 19 degrees[0m
+[0;32mI (5902) SERVO: Servo Wrist set to 20 degrees[0m
+[0;32mI (5922) SERVO: Servo Wrist set to 21 degrees[0m
+[0;32mI (5942) SERVO: Servo Wrist set to 22 degrees[0m
+[0;32mI (5962) SERVO: Servo Wrist set to 23 degrees[0m
+[0;32mI (5982) SERVO: Servo Wrist set to 24 degrees[0m
+[0;32mI (6002) SERVO: Servo Wrist set to 25 degrees[0m
+[0;32mI (6022) SERVO: Servo Wrist set to 26 degrees[0m
+[0;32mI (6042) SERVO: Servo Wrist set to 27 degrees[0m
+[0;32mI (6062) SERVO: Servo Wrist set to 28 degrees[0m
+[0;32mI (6082) SERVO: Servo Wrist set to 29 degrees[0m
+[0;32mI (6102) SERVO: Servo Wrist set to 30 degrees[0m
+[0;32mI (6122) SERVO: Servo Wrist set to 31 degrees[0m
+[0;32mI (6142) SERVO: Servo Wrist set to 32 degrees[0m
+[0;32mI (6162) SERVO: Servo Wrist set to 33 degrees[0m
+[0;32mI (6182) SERVO: Servo Wrist set to 34 degrees[0m
+[0;32mI (6202) SERVO: Servo Wrist set to 35 degrees[0m
+[0;32mI (6222) SERVO: Servo Wrist set to 36 degrees[0m
+[0;32mI (6242) SERVO: Servo Wrist set to 37 degrees[0m
+[0;32mI (6262) SERVO: Servo Wrist set to 38 degrees[0m
+[0;32mI (6282) SERVO: Servo Wrist set to 39 degrees[0m
+[0;32mI (6302) SERVO: Servo Wrist set to 40 degrees[0m
+[0;32mI (6322) SERVO: Servo Wrist set to 41 degrees[0m
+[0;32mI (6342) SERVO: Servo Wrist set to 42 degrees[0m
+[0;32mI (6362) SERVO: Servo Wrist set to 43 degrees[0m
+[0;32mI (6382) SERVO: Servo Wrist set to 44 degrees[0m
+[0;32mI (6402) SERVO: Servo Wrist set to 45 degrees[0m
+[0;32mI (6422) SERVO: Servo Wrist set to 46 degrees[0m
+[0;32mI (6442) SERVO: Servo Wrist set to 47 degrees[0m
+[0;32mI (6462) SERVO: Servo Wrist set to 48 degrees[0m
+[0;32mI (6482) SERVO: Servo Wrist set to 49 degrees[0m
+[0;32mI (6502) SERVO: Servo Wrist set to 50 degrees[0m
+[0;32mI (6522) SERVO: Servo Wrist set to 51 degrees[0m
+[0;32mI (6542) SERVO: Servo Wrist set to 52 degrees[0m
+[0;32mI (6562) SERVO: Servo Wrist set to 53 degrees[0m
+[0;32mI (6582) SERVO: Servo Wrist set to 54 degrees[0m
+[0;32mI (6602) SERVO: Servo Wrist set to 55 degrees[0m
+[0;32mI (6622) SERVO: Servo Wrist set to 56 degrees[0m
+[0;32mI (6642) SERVO: Servo Wrist set to 57 degrees[0m
+[0;32mI (6662) SERVO: Servo Wrist set to 58 degrees[0m
+[0;32mI (6682) SERVO: Servo Wrist set to 59 degrees[0m
+[0;32mI (6702) SERVO: Servo Wrist set to 60 degrees[0m
+[0;32mI (6722) SERVO: Servo Wrist set to 61 degrees[0m
+[0;32mI (6742) SERVO: Servo Wrist set to 62 degrees[0m
+[0;32mI (6762) SERVO: Servo Wrist set to 63 degrees[0m
+[0;32mI (6782) SERVO: Servo Wrist set to 64 degrees[0m
+[0;32mI (6802) SERVO: Servo Wrist set to 65 degrees[0m
+[0;32mI (6822) SERVO: Servo Wrist set to 66 degrees[0m
+[0;32mI (6842) SERVO: Servo Wrist set to 67 degrees[0m
+[0;32mI (6862) SERVO: Servo Wrist set to 68 degrees[0m
+[0;32mI (6882) SERVO: Servo Wrist set to 69 degrees[0m
+[0;32mI (6902) SERVO: Servo Wrist set to 70 degrees[0m
+[0;32mI (6922) SERVO: Servo Wrist set to 71 degrees[0m
+[0;32mI (6942) SERVO: Servo Wrist set to 72 degrees[0m
+[0;32mI (6962) SERVO: Servo Wrist set to 73 degrees[0m
+[0;32mI (6982) SERVO: Servo Wrist set to 74 degrees[0m
+[0;32mI (7002) SERVO: Servo Wrist set to 75 degrees[0m
+[0;32mI (7022) SERVO: Servo Wrist set to 76 degrees[0m
+[0;32mI (7042) SERVO: Servo Wrist set to 77 degrees[0m
+[0;32mI (7062) SERVO: Servo Wrist set to 78 degrees[0m
+[0;32mI (7082) SERVO: Servo Wrist set to 79 degrees[0m
+[0;32mI (7102) SERVO: Servo Wrist set to 80 degrees[0m
+[0;32mI (7122) SERVO: Servo Wrist set to 81 degrees[0m
+[0;32mI (7142) SERVO: Servo Wrist set to 82 degrees[0m
+[0;32mI (7162) SERVO: Servo Wrist set to 83 degrees[0m
+[0;32mI (7182) SERVO: Servo Wrist set to 84 degrees[0m
+[0;32mI (7202) SERVO: Servo Wrist set to 85 degrees[0m
+[0;32mI (7222) SERVO: Servo Wrist set to 86 degrees[0m
+[0;32mI (7242) SERVO: Servo Wrist set to 87 degrees[0m
+[0;32mI (7262) SERVO: Servo Wrist set to 88 degrees[0m
+[0;32mI (7282) SERVO: Servo Wrist set to 89 degrees[0m
+[0;32mI (7302) SERVO: Servo Wrist set to 90 degrees[0m
+[0;32mI (7322) SERVO: Servo Wrist set to 91 degrees[0m
+[0;32mI (7342) SERVO: Servo Wrist set to 92 degrees[0m
+[0;32mI (7362) SERVO: Servo Wrist set to 93 degrees[0m
+[0;32mI (7382) SERVO: Servo Wrist set to 94 degrees[0m
+[0;32mI (7402) SERVO: Servo Wrist set to 95 degrees[0m
+[0;32mI (7422) SERVO: Servo Wrist set to 96 degrees[0m
+[0;32mI (7442) SERVO: Servo Wrist set to 97 degrees[0m
+[0;32mI (7462) SERVO: Servo Wrist set to 98 degrees[0m
+[0;32mI (7482) SERVO: Servo Wrist set to 99 degrees[0m
+[0;32mI (7502) SERVO: Servo Wrist set to 100 degrees[0m
+[0;32mI (7522) SERVO: Servo Wrist set to 101 degrees[0m
+[0;32mI (7542) SERVO: Servo Wrist set to 102 degrees[0m
+[0;32mI (7562) SERVO: Servo Wrist set to 103 degrees[0m
+[0;32mI (7582) SERVO: Servo Wrist set to 104 degrees[0m
+[0;32mI (7602) SERVO: Servo Wrist set to 105 degrees[0m
+[0;32mI (7622) SERVO: Servo Wrist set to 106 degrees[0m
+[0;32mI (7642) SERVO: Servo Wrist set to 107 degrees[0m
+[0;32mI (7662) SERVO: Servo Wrist set to 108 degrees[0m
+[0;32mI (7682) SERVO: Servo Wrist set to 109 degrees[0m
+[0;32mI (7702) SERVO: Servo Wrist set to 110 degrees[0m
+[0;32mI (7722) SERVO: Servo Wrist set to 111 degrees[0m
+[0;32mI (7742) SERVO: Servo Wrist set to 112 degrees[0m
+[0;32mI (7762) SERVO: Servo Wrist set to 113 degrees[0m
+[0;32mI (7782) SERVO: Servo Wrist set to 114 degrees[0m
+[0;32mI (7802) SERVO: Servo Wrist set to 115 degrees[0m
+[0;32mI (7822) SERVO: Servo Wrist set to 116 degrees[0m
+[0;32mI (7842) SERVO: Servo Wrist set to 117 degrees[0m
+[0;32mI (7862) SERVO: Servo Wrist set to 118 degrees[0m
+[0;32mI (7882) SERVO: Servo Wrist set to 119 degrees[0m
+[0;32mI (7902) SERVO: Servo Wrist set to 120 degrees[0m
+[0;32mI (7922) SERVO: Servo Wrist set to 121 degrees[0m
+[0;32mI (7942) SERVO: Servo Wrist set to 122 degrees[0m
+[0;32mI (7962) SERVO: Servo Wrist set to 123 degrees[0m
+[0;32mI (7982) SERVO: Servo Wrist set to 124 degrees[0m
+[0;32mI (8002) SERVO: Servo Wrist set to 125 degrees[0m
+[0;32mI (8022) SERVO: Servo Wrist set to 126 degrees[0m
+[0;32mI (8042) SERVO: Servo Wrist set to 127 degrees[0m
+[0;32mI (8062) SERVO: Servo Wrist set to 128 degrees[0m
+[0;32mI (8082) SERVO: Servo Wrist set to 129 degrees[0m
+[0;32mI (8102) SERVO: Servo Wrist set to 130 degrees[0m
+[0;32mI (8122) SERVO: Servo Wrist set to 131 degrees[0m
+[0;32mI (8142) SERVO: Servo Wrist set to 132 degrees[0m
+[0;32mI (8162) SERVO: Servo Wrist set to 133 degrees[0m
+[0;32mI (8182) SERVO: Servo Wrist set to 134 degrees[0m
+[0;32mI (8202) SERVO: Servo Wrist set to 135 degrees[0m
+[0;32mI (8222) SERVO: Servo Wrist set to 136 degrees[0m
+[0;32mI (8242) SERVO: Servo Wrist set to 137 degrees[0m
+[0;32mI (8262) SERVO: Servo Wrist set to 138 degrees[0m
+[0;32mI (8282) SERVO: Servo Wrist set to 139 degrees[0m
+[0;32mI (8302) SERVO: Servo Wrist set to 140 degrees[0m
+[0;32mI (8322) SERVO: Servo Wrist set to 141 degrees[0m
+[0;32mI (8342) SERVO: Servo Wrist set to 142 degrees[0m
+[0;32mI (8362) SERVO: Servo Wrist set to 143 degrees[0m
+[0;32mI (8382) SERVO: Servo Wrist set to 144 degrees[0m
+[0;32mI (8402) SERVO: Servo Wrist set to 145 degrees[0m
+[0;32mI (8422) SERVO: Servo Wrist set to 146 degrees[0m
+[0;32mI (8442) SERVO: Servo Wrist set to 147 degrees[0m
+[0;32mI (8462) SERVO: Servo Wrist set to 148 degrees[0m
+[0;32mI (8482) SERVO: Servo Wrist set to 149 degrees[0m
+[0;32mI (8502) SERVO: Servo Wrist set to 150 degrees[0m
+[0;32mI (8522) SERVO: Servo Wrist set to 151 degrees[0m
+[0;32mI (8542) SERVO: Servo Wrist set to 152 degrees[0m
+[0;32mI (8562) SERVO: Servo Wrist set to 153 degrees[0m
+[0;32mI (8582) SERVO: Servo Wrist set to 154 degrees[0m
+[0;32mI (8602) SERVO: Servo Wrist set to 155 degrees[0m
+[0;32mI (8622) SERVO: Servo Wrist set to 156 degrees[0m
+[0;32mI (8642) SERVO: Servo Wrist set to 157 degrees[0m
+[0;32mI (8662) SERVO: Servo Wrist set to 158 degrees[0m
+[0;32mI (8682) SERVO: Servo Wrist set to 159 degrees[0m
+[0;32mI (8702) SERVO: Servo Wrist set to 160 degrees[0m
+[0;32mI (8722) SERVO: Servo Wrist set to 161 degrees[0m
+[0;32mI (8742) SERVO: Servo Wrist set to 162 degrees[0m
+[0;32mI (8762) SERVO: Servo Wrist set to 163 degrees[0m
+[0;32mI (8782) SERVO: Servo Wrist set to 164 degrees[0m
+[0;32mI (8802) SERVO: Servo Wrist set to 165 degrees[0m

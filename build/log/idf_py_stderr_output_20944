@@ -1,0 +1,41 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008152c: rtc_brownout_isr_handler at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/brownout.c:72
+[0m
+[0;33m--- 0x4008509e: esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40033821: ld_acl_resched in ROM
+[0m
+[0;33m--- 0x4008509e: esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008152c: rtc_brownout_isr_handler at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/brownout.c:72
+[0m
+[0;33m--- 0x4008509e: esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008152c: rtc_brownout_isr_handler at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/brownout.c:72
+[0m
+[0;33m--- 0x4008509e: esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

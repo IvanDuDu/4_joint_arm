@@ -1,0 +1,39 @@
+CMake Error at D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/component.cmake:228 (message):
+  CMake Warning (dev) at build_properties.temp.cmake:8:
+
+    Syntax Warning in cmake code at column 106
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:3 (include)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+
+
+  CMake Error at D:/Project/arm4Joint/army/main/CMakeLists.txt:3:
+
+    Parse error.  Function missing ending ")".  End of file reached.
+
+  Call Stack (most recent call first):
+
+    D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:160 (__component_get_requirements)
+
+  
+
+
+
+  fatal: not a git repository (or any of the parent directories): .git
+
+Call Stack (most recent call first):
+  D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/build.cmake:644 (__component_get_requirements)
+  D:/After_the_April/espTools/v5.4.1/esp-idf/tools/cmake/project.cmake:717 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

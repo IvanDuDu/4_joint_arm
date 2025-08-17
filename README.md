@@ -91,8 +91,8 @@ typedef struct {
     int intensity;             // Cường độ (áp dụng cho tốc độ/tầm chuyển động)
 } uart_packet_t;
 ```
-Cơ chế Queue
-Server side:
+## Cơ chế Queue
+### Server side:
 
 Khi nhận diện được một cử chỉ, nó không gửi ngay lập tức mà push vào queue.
 
@@ -100,7 +100,7 @@ Một tiến trình nền đọc queue, đảm bảo chỉ một gói tin đư�
 
 Tránh tình trạng buffer overflow trên UART khi cử chỉ liên tục.
 
-Robot side:
+### Robot side:
 
 Nhận gói tin từ UART, parse vào struct.
 
@@ -108,44 +108,44 @@ Nhận gói tin từ UART, parse vào struct.
 
 Mỗi servo chỉ nhận lệnh sau khi lệnh trước đó hoàn tất.
 
-⚙️ Cách thức hoạt động
-Nhận diện
+## ⚙️ Cách thức hoạt động
+### Nhận diện
 
 Người dùng thực hiện cử chỉ tay trước camera → gesture.py nhận diện → ánh xạ thành servo_id và hướng (tăng/giảm góc).
 
 Hoặc người dùng ra lệnh giọng nói → speech.py (Vosk) nhận diện → xác định loại hành động cần làm.
 
-Phân tích & ánh xạ
+### Phân tích & ánh xạ
 
 signal_mapper.py kết hợp dữ liệu gesture/voice → xây dựng gói tin uart_packet_t.
 
 Đưa gói tin vào UART Queue để chờ gửi.
 
-Truyền qua UART
+### Truyền qua UART
 
 uart_queue.py lấy gói tin ra, gửi tuần tự qua UART.
 
 Đảm bảo tốc độ truyền ổn định, tránh nghẽn.
 
-Xử lý trên Robot
+### Xử lý trên Robot
 
 uart_comm.c nhận dữ liệu → đẩy vào queue nội bộ.
 
 packet_parser.c parse dữ liệu → tạo command servo.
 
-motion.c:
+### motion.c:
 
 Di chuyển servo theo step delay thay vì nhảy góc ngay → chuyển động mượt.
 
 Tôn trọng intensity → nếu intensity cao, góc tăng nhanh hơn và step delay giảm.
 
-Servo thực hiện
+### Servo thực hiện
 
 servo_driver.c gửi PWM tới servo tương ứng.
 
 Robot di chuyển đúng theo ý nghĩa của cử chỉ hoặc giọng nói.
 
-🔑 Đặc điểm hàm điều khiển chuyển động
+# Đặc điểm hàm điều khiển chuyển động
 motion_step(): di chuyển servo theo từng bước nhỏ.
 
 motion_to_angle(): tính toán số bước cần để tới góc đích.
@@ -154,7 +154,7 @@ apply_intensity(): thay đổi tốc độ/góc dựa theo tín hiệu cường 
 
 smooth_move(): đảm bảo servo không giật cục, mô phỏng chuyển động “người thật”.
 
-🚀 Kết quả mong đợi
+# Kết quả mong đợi
 Người dùng có thể điều khiển cánh tay robot chỉ bằng cử chỉ tay hoặc giọng nói.
 
 Hệ thống queue UART đảm bảo độ tin cậy khi tín hiệu gửi liên tục.

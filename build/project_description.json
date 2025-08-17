@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "army",
-    "project_version":    "1",
+    "project_version":    "f4a0d37-dirty",
     "project_path":       "D:/Project/arm4Joint/army",
     "idf_path":           "D:/After_the_April/espTools/v5.4.1/esp-idf",
     "build_dir":          "D:/Project/arm4Joint/army/build",

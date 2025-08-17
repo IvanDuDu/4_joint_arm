@@ -54,15 +54,17 @@ esp_err_t uart_manager_init(void) {
 
 esp_err_t uart_check_signals(void) {
     // Check the status of the UART signals
-    uart_signal_inv_t inv;
-    esp_err_t ret = uart_get_signal_inv(UART_PORT, &inv);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to get UART signal inversion: %s", esp_err_to_name(ret));
-        return ret;
-    }
-    ESP_LOGI(TAG, "UART signal inversion: 0x%02X", inv);
+    // uart_signal_inv_t inv;
+    // esp_err_t ret = uart_get_signal_inv(UART_PORT, &inv);
+    // if (ret != ESP_OK) {
+    //     ESP_LOGE(TAG, "Failed to get UART signal inversion: %s", esp_err_to_name(ret));
+    //     return ret;
+    // }
+    // ESP_LOGI(TAG, "UART signal inversion: 0x%02X", inv);
     return ESP_OK;
 }
+
+
 
 
 esp_err_t uart_read_packet(uart_packet_t *packet, TickType_t timeout) { 
@@ -74,7 +76,8 @@ esp_err_t uart_read_packet(uart_packet_t *packet, TickType_t timeout) {
         return ESP_FAIL;
     }
 
-    memcpy(packet, data, sizeof(uart_packet_t));
+    packet->servo_id = (data[0]>>4) &0x03;
+    packet->step_delay_ms = data[0] & 0x0f;
     return ESP_OK;
 }
 
@@ -83,7 +86,6 @@ void uart_rx_task(void *param) {
     while (1) {
         int length = uart_read_bytes(UART_PORT, data, sizeof(data), portMAX_DELAY);
         if (length > 0) {
-          
             xQueueSend(signal_queue, &data, portMAX_DELAY);
         }
     }
@@ -102,8 +104,8 @@ void uart_processing_task(void *param) {
                 index += sizeof(uart_packet_t);
 
                 // In log packet
-                ESP_LOGI(TAG, "Decoded Packet -> Servo ID: %d, Angle: %d, Step Delay: %d",
-                         pkt.servo_id[0], pkt.angle[0], pkt.step_delay_ms[0]);
+                ESP_LOGI(TAG, "Decoded Packet -> Servo ID: %d, Step Delay: %d",
+                         pkt.servo_id, pkt.step_delay_ms);
             }
 
             // Dồn phần còn lại về đầu buffer
@@ -117,9 +119,10 @@ void uart_processing_task(void *param) {
 
 
 
+
 void uart_manager_log_packet(const uart_packet_t *packet) {
- ESP_LOGI(TAG, "Decoded Packet -> Servo ID: %lu, Angle: %lu, Step Delay: %lu",
-             packet->servo_id, packet->angle, packet->step_delay_ms);
+ ESP_LOGI(TAG, "Decoded Packet -> Servo ID: %d, Step Delay: %d",
+            (int) packet->servo_id, (int) packet->step_delay_ms);
 }
 
 

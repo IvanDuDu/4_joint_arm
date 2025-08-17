@@ -124,7 +124,7 @@ esp_err_t servo_set_angle(servo_id_t servo_id, int angle) {
     }
 
     servo_configs[servo_id].current_angle = angle;
-    ESP_LOGI(TAG, "Servo %s set to %d degrees", servo_configs[servo_id].name, angle);
+    
     
     return ESP_OK;
 }
@@ -180,8 +180,8 @@ esp_err_t servo_move_smooth(servo_id_t servo_id, int target_angle, int step_dela
     int current_angle = servo_configs[servo_id].current_angle;
     int step = (target_angle > current_angle) ? 1 : -1;
     
-    ESP_LOGI(TAG, "Smooth move servo %s from %d to %d degrees", 
-            servo_configs[servo_id].name, current_angle, target_angle);
+    // ESP_LOGI(TAG, "Smooth move servo %s from %d to %d degrees", 
+    //         servo_configs[servo_id].name, current_angle, target_angle);
 
     while (current_angle != target_angle) {
         current_angle += step;
@@ -194,6 +194,40 @@ esp_err_t servo_move_smooth(servo_id_t servo_id, int target_angle, int step_dela
 
     return ESP_OK;
 }
+
+esp_err_t servo_uart_controller(servo_id_t servo_id, int8_t step_delay_ms, int8_t direct){
+if (!servo_system_initialized) {
+        ESP_LOGE(TAG, "Servo system not initialized");
+        return ESP_ERR_INVALID_STATE;
+    }
+
+    if (!servo_is_valid_id(servo_id)) {
+        ESP_LOGE(TAG, "Invalid servo ID: %d", servo_id);
+        return ESP_ERR_INVALID_ARG;
+    }
+    int current_angle = servo_configs[servo_id].current_angle;
+
+
+    if (!servo_is_valid_angle(current_angle)) {
+        ESP_LOGE(TAG, "Invalid target angle: %d", current_angle);
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    int step = direct ? 1 : -1;
+
+    // ESP_LOGI(TAG, "Smooth move servo %s from %d to %d degrees", 
+    //         servo_configs[servo_id].name, current_angle, target_angle);
+        current_angle += step;
+        esp_err_t ret = servo_set_angle(servo_id, current_angle);
+        if (ret != ESP_OK) {
+            return ret;
+        }
+        vTaskDelay(pdMS_TO_TICKS(step_delay_ms));
+    
+
+    return ESP_OK;
+}
+
 
 bool servo_is_initialized(void) {
     return servo_system_initialized;
@@ -252,8 +286,8 @@ static esp_err_t servo_configure_pwm(servo_id_t servo_id) {
         return ret;
     }
 
-    ESP_LOGD(TAG, "Configured servo %d (%s) on GPIO %d", 
-            servo_id, servo_configs[servo_id].name, servo_configs[servo_id].gpio_pin);
+    // ESP_LOGD(TAG, "Configured servo %d (%s) on GPIO %d", 
+    //         servo_id, servo_configs[servo_id].name, servo_configs[servo_id].gpio_pin);
     
     return ESP_OK;
 }

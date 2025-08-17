@@ -29,6 +29,9 @@ esp_err_t servo_set_angle(servo_id_t servo_id, int angle);
 esp_err_t servo_set_all_angles(int angles[SERVO_COUNT]);
 esp_err_t servo_reset_all(void);
 esp_err_t servo_move_smooth(servo_id_t servo_id, int target_angle, int step_delay_ms);
+// cần hàm hiệu chỉnh cho target angle cho hàm này
+esp_err_t servo_uart_controller(servo_id_t servo_id, int8_t step_delay_ms, int8_t direct);
+
 bool servo_is_initialized(void);
 void servo_deinit(void);
 

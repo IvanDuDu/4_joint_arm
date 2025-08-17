@@ -1,0 +1,59 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.6.2 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400819ad: panic_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/panic.c:454
+--- 0x40086325: esp_system_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4008cac9: __assert_func at D:/After_the_April/espTools/v5.4.1/esp-idf/components/newlib/assert.c:80
+--- 0x400878fa: xTimerGenericCommand at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/timers.c:460 (discriminator 1)
+--- 0x40082bd9: gpio_isr_handler at D:/Project/arm4Joint/army/main/gpio_manager.c:239 (discriminator 1)
+--- 0x400831ca: gpio_isr_loop at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:466
+--- 0x4008325a: gpio_intr_service at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:488
+--- 0x40082f79: _xt_lowint1 at D:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4008509b: xt_utils_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/include/xt_utils.h:82
+---  (inlined by) esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:55
+--- 0x400d2617: esp_vApplicationIdleHook at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/freertos_hooks.c:58
+--- 0x40087fa6: prvIdleTask at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4353 (discriminator 1)
+--- 0x40086d09: vPortTaskWrapper at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400819ad: panic_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/panic.c:454
+--- 0x40086325: esp_system_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4008cac9: __assert_func at D:/After_the_April/espTools/v5.4.1/esp-idf/components/newlib/assert.c:80
+--- 0x400878fa: xTimerGenericCommand at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/timers.c:460 (discriminator 1)
+--- 0x40082bd9: gpio_isr_handler at D:/Project/arm4Joint/army/main/gpio_manager.c:239 (discriminator 1)
+--- 0x400831ca: gpio_isr_loop at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:466
+--- 0x4008325a: gpio_intr_service at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:488
+--- 0x40082f79: _xt_lowint1 at D:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x400d260d: esp_vApplicationIdleHook at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/freertos_hooks.c:46 (discriminator 1)
+--- 0x40087fa6: prvIdleTask at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4353 (discriminator 1)
+--- 0x40086d09: vPortTaskWrapper at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400819ad: panic_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/panic.c:454
+--- 0x40086325: esp_system_abort at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4008cac9: __assert_func at D:/After_the_April/espTools/v5.4.1/esp-idf/components/newlib/assert.c:80
+--- 0x400878fa: xTimerGenericCommand at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/timers.c:460 (discriminator 1)
+--- 0x40082bd9: gpio_isr_handler at D:/Project/arm4Joint/army/main/gpio_manager.c:239 (discriminator 1)
+--- 0x400831ca: gpio_isr_loop at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:466
+--- 0x4008325a: gpio_intr_service at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c:488
+--- 0x40082f79: _xt_lowint1 at D:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/xtensa_vectors.S:1240
+--- 0x4008509b: xt_utils_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/xtensa/include/xt_utils.h:82
+---  (inlined by) esp_cpu_wait_for_intr at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_hw_support/cpu.c:55
+--- 0x400d2617: esp_vApplicationIdleHook at D:/After_the_April/espTools/v5.4.1/esp-idf/components/esp_system/freertos_hooks.c:58
+--- 0x40087fa6: prvIdleTask at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4353 (discriminator 1)
+--- 0x40086d09: vPortTaskWrapper at D:/After_the_April/espTools/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

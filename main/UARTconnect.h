@@ -17,13 +17,13 @@
 
 
 typedef struct {
-    servo_id_t servo_id[4];
-    int angle[4];
-    int step_delay_ms[4];
+    servo_id_t servo_id;
+    int8_t step_delay_ms;
+    int8_t direct;
 } uart_packet_t;
 
 
-esp_err_t uart_manager_init(void);
+esp_err_t uart_manager_init(void);  
 esp_err_t uart_check_signals(void);
 esp_err_t uart_read_packet(uart_packet_t *packet, TickType_t timeout);
 void uart_rx_task(void *param);
@@ -31,4 +31,4 @@ void uart_processing_task(void *param);
 void uart_manager_log_packet(const uart_packet_t *packet);
 
 
-#endif // SERVO_CONTROLLER_H
+#endif // UARTCONNECT_H

@@ -85,10 +85,9 @@ Chỉnh sửa
 ### Định dạng gói tin UART
 ```c
 typedef struct {
-    servo_id_t servo_id[4];    // ID 4 servo
-    int angle[4];              // Góc mong muốn
-    int step_delay_ms[4];      // Độ trễ từng bước (chuyển động mượt)
-    int intensity;             // Cường độ (áp dụng cho tốc độ/tầm chuyển động)
+    servo_id_t servo_id;  
+    int8_t step_delay_ms;      // Độ trễ từng bước (chuyển động mượt)
+    int8_t direct;             
 } uart_packet_t;
 ```
 ## Cơ chế Queue
